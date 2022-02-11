@@ -1,0 +1,49 @@
+{
+  "name": "checkup-plugin-style",
+  "description": "A Checkup plugin for style related tasks (CSS, SCSS, etc)",
+  "version": "0.0.0",
+  "author": "Lucy Lin @lin-ll",
+  "dependencies": {
+    "@checkup/core": "^1.4.2",
+    "tslib": "^1"
+  },
+  "devDependencies": {
+    "@checkup/plugin": "^1.4.2",
+    "@checkup/test-helpers": "^1.4.2",
+    "@types/jest": "^25.1.3",
+    "@types/node": "^13",
+    "@typescript-eslint/eslint-plugin": "^3.5.0",
+    "@typescript-eslint/parser": "^3.5.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "jest": "^25.1.0",
+    "prettier": "^2.0.5",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8",
+    "typescript": "^3.8"
+  },
+  "engines": {
+    "node": ">= 12.11.*"
+  },
+  "files": [
+    "/lib"
+  ],
+  "keywords": [
+    "checkup-plugin"
+  ],
+  "license": "MIT",
+  "repository": "https://github.com/checkupjs/checkup-plugin-style",
+  "scripts": {
+    "build": "yarn clean && tsc",
+    "build:watch": "yarn build -w",
+    "clean": "rm -rf lib",
+    "docs:generate": "checkup-plugin docs",
+    "lint": "eslint . --cache --ext .ts",
+    "test": "jest --no-cache"
+  },
+  "types": "lib/index.d.ts",
+  "main": "lib/index.js"
+}
